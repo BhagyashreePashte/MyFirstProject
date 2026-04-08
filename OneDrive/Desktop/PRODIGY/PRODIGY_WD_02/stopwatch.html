@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Stopwatch App</title>
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  
+  <!-- main css -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="wrap">
+  <h1>Stopwatch</h1>
+
+  <!-- Clock Ring -->
+  <div class="clock-ring">
+    <svg class="ring-svg" width="260" height="260" viewBox="0 0 260 260">
+      <circle class="ring-bg"   cx="130" cy="130" r="115"/>
+      <circle class="ring-prog" cx="130" cy="130" r="115" id="ringProg"/>
+    </svg>
+    <div class="clock-inner">
+      <div class="time-display" id="timeDisplay">00:00:00</div>
+      <div class="ms-display"   id="msDisplay">.00</div>
+      <div class="status-dot"   id="statusDot"></div>
+    </div>
+  </div>
+
+  <!-- Buttons -->
+  <div class="btn-row">
+    <button class="btn btn-start" id="btnStart" onclick="startStop()">Start</button>
+    <button class="btn btn-lap"   id="btnLap"   onclick="recordLap()" disabled>Lap</button>
+    <button class="btn btn-reset" id="btnReset" onclick="resetWatch()" disabled>Reset</button>
+  </div>
+
+  <!-- Lap List -->
+  <div class="laps-header">
+    <span class="laps-title">Lap times</span>
+    <span class="laps-count" id="lapsCount"></span>
+  </div>
+  <div class="laps-list" id="lapsList">
+    <div class="empty-laps">No laps recorded yet</div>
+  </div>
+</div>
+
+<script src="myScript.js"></script>
+</body>
+</html>
