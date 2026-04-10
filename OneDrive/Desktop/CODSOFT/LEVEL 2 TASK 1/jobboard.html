@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>JobBoard — Find Your Dream Job</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=Syne:wght@700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-logo" onclick="navigate('home')">
+    <div class="nav-logo-dot"></div>
+    JobBoard
+  </div>
+  <div class="nav-links">
+    <button class="nav-link" id="nl-home" onclick="navigate('home')">Home</button>
+    <button class="nav-link" id="nl-jobs" onclick="navigate('jobs')">Browse Jobs</button>
+    <button class="nav-link" id="nl-employer" onclick="navigate('employer')">For Employers</button>
+    <button class="nav-link" id="nl-candidate" onclick="navigate('candidate')">Dashboard</button>
+  </div>
+  <div class="nav-auth" id="nav-auth"></div>
+</nav>
+
+<main id="main"></main>
+<div class="toast" id="toast"></div>
+
+<script src="myScript.js"></script>
+</body>
+</html>
